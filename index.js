@@ -19,9 +19,14 @@ app.use(
 app.use(cookieParser());
 app.use("/auth", UserRouter);
 
+// Define a route for the root path
+app.get("/", (req, res) => {
+  res.send("Welcome to the home page!");
+});
+
 async function dbconnect() {
   await mongoose.connect(
-    "mongodb+srv://saran1:Saran123@podcast.haoollu.mongodb.net/User?retryWrites=true&w=majority&appName=podcast",
+    "mongodb+srv://preethamvenkatram:Preeth0987123@podify1.t5nxief.mongodb.net/",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
